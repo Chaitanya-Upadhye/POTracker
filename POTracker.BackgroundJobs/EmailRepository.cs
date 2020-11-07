@@ -1,6 +1,7 @@
 ﻿using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Search;
+using MimeKit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace POTracker.BackgroundJobs
     public class EmailRepository:IEmailService
     {
         //this is going to be the recurring task
-        private readonly string mailServer= "imap.mail.yahoo.com", login= "youremailaddress@yahoo.com", password= "apppassword";
+        private readonly string mailServer= "imap.mail.yahoo.com", login= "testaccount7537@yahoo.com", password= "pqhspzskjhspogor";
         private readonly int port=993;
         private readonly bool ssl=true;
 
@@ -58,9 +59,11 @@ namespace POTracker.BackgroundJobs
             return messages;
         }
 
-        public  IEnumerable<string> GetAllMails()
+        public  IEnumerable<Object> GetAllMails()
         {
-            var messages = new List<string>();
+            List<MimeMessage> messages = new List<MimeMessage>();
+            IEnumerable<MailboxAddress> fromAddresses = new List<MailboxAddress>();
+            List<MimeMessage> finalEmails = new List<MimeMessage>();
 
             using (var client = new ImapClient())
             {
@@ -78,22 +81,36 @@ namespace POTracker.BackgroundJobs
                 var results = inbox.Count();
                 for(int i=0; i<results;i++)
                 {
-                    var message = inbox.GetMessage(i);
+                    MimeMessage  message= inbox.GetMessage(i);
                     
-
-                    messages.Add(message.HtmlBody);
+                    
+                    
+                    messages.Add(message);
+                    
 
                     //Mark message as read
                     //inbox.AddFlags(uniqueId, MessageFlags.Seen, true);
                 }
+               
+                foreach (var item in messages)
+                {
+                    fromAddresses= item.From.Mailboxes;
+                    foreach (var from in fromAddresses)
+                    {
+                        if(from.Address == "uzzomanis@gmail.com") finalEmails.Add(item);
+                        
+                    }
+                }
+
+
 
                 client.Disconnect(true);
             }
 
-            return messages;
+            return finalEmails;
         }
     }
 
-
+  
 
 }

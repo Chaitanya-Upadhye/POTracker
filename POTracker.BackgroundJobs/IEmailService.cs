@@ -7,7 +7,7 @@ namespace POTracker.BackgroundJobs
 {
     interface IEmailService
     {
-        public IEnumerable<string> GetAllMails();
+        public IEnumerable<Object> GetAllMails();
 
         public IEnumerable<string> GetUnreadMails();
     }
