@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace POTracker.NotificationService.Controllers
+namespace POTracker.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

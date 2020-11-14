@@ -1,6 +1,6 @@
 using System;
 
-namespace POTracker.NotificationService
+namespace POTracker.API
 {
     public class WeatherForecast
     {

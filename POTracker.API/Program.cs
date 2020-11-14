@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace POTracker.NotificationService
+namespace POTracker.API
 {
     public class Program
     {

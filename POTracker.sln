@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POTracker.BackgroundJobs", "POTracker.BackgroundJobs\POTracker.BackgroundJobs.csproj", "{81C57568-060F-4D26-8970-F2C1BD950B1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POTracker.NotificationService", "POTracker.NotificationService\POTracker.NotificationService.csproj", "{466FBA6F-2783-4C0C-AB1C-4E747EBD971F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POTracker.API", "POTracker.API\POTracker.API.csproj", "{0D60AFAB-4177-4FA0-AFDF-BA3FA9BFD871}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{81C57568-060F-4D26-8970-F2C1BD950B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81C57568-060F-4D26-8970-F2C1BD950B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81C57568-060F-4D26-8970-F2C1BD950B1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{466FBA6F-2783-4C0C-AB1C-4E747EBD971F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{466FBA6F-2783-4C0C-AB1C-4E747EBD971F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{466FBA6F-2783-4C0C-AB1C-4E747EBD971F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{466FBA6F-2783-4C0C-AB1C-4E747EBD971F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D60AFAB-4177-4FA0-AFDF-BA3FA9BFD871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D60AFAB-4177-4FA0-AFDF-BA3FA9BFD871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D60AFAB-4177-4FA0-AFDF-BA3FA9BFD871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D60AFAB-4177-4FA0-AFDF-BA3FA9BFD871}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
