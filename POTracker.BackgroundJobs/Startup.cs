@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Hangfire;
@@ -25,6 +26,11 @@ namespace POTracker.BackgroundJobs
 
             services.AddHangfireServer();
             services.AddSingleton<IEmailService, EmailRepository>();
+            services.Configure<IISOptions>(options =>
+            {
+                options.AutomaticAuthentication = false;
+            });
+          
 
         }
 

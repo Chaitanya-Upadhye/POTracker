@@ -26,6 +26,10 @@ namespace POTracker.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.Configure<IISOptions>(options =>
+            {
+                options.AutomaticAuthentication = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
