@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MimeKit;
 
 namespace POTracker.BackgroundJobs
 {
-    interface IEmailService
+    public class EmailModel
     {
-        public  Task GetAllMails();
+        public string from { get; set; }
+        public byte[] attachedPdf { get; set; }
 
-        public IEnumerable<string> GetUnreadMails();
+
+
+
     }
 }

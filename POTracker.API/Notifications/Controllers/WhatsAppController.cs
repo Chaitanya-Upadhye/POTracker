@@ -19,12 +19,12 @@ namespace POTracker.API.Notifications.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/WhatsApp/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //// GET: api/WhatsApp/5
+        //[HttpGet("{id}", Name = "Get")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
 
         // POST: api/WhatsApp
         [HttpPost]

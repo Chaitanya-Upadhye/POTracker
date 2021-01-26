@@ -9,5 +9,11 @@
     <PackageReference Include="Twilio" Version="5.49.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="WebService\Controllers\" />
+    <Folder Include="WebService\Models\" />
+    <Folder Include="WebService\Repository\" />
+  </ItemGroup>
+
 
 </Project>

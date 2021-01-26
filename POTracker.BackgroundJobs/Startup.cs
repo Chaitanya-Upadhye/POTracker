@@ -25,7 +25,7 @@ namespace POTracker.BackgroundJobs
             UseMemoryStorage());
 
             services.AddHangfireServer();
-            services.AddSingleton<IEmailService, EmailRepository>();
+            services.AddSingleton<IEmailService, EmailClient>();
             services.Configure<IISOptions>(options =>
             {
                 options.AutomaticAuthentication = false;
